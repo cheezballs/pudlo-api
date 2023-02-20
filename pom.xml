@@ -2,20 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.1</version>
+        <version>3.0.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>us.mattroberts</groupId>
     <artifactId>pudlo-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Pudlo API</name>
     <description>API for Pudlo</description>
+
+    <url>https://github.com/cheezballs/pudlo-api</url>
+    <inceptionYear>2023</inceptionYear>
+
+    <scm>
+        <connection>scm:git:git://github.com/cheezballs/pudlo-api.git</connection>
+        <developerConnection>scm:git:git@github.com:cheezballs/pudlo-api.git</developerConnection>
+        <url>https://github.com/cheezballs/pudlo-api</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>cheezballs</id>
+            <name>Matt Roberts</name>
+            <url>https://mattroberts.us</url>
+            <roles>
+                <role>overlord</role>
+                <role>developer</role>
+            </roles>
+            <properties>
+                <picUrl>https://avatars.githubusercontent.com/u/2106678?s=400</picUrl>
+            </properties>
+        </developer>
+    </developers>
+
     <properties>
         <java.version>17</java.version>
+        <lombok.version>1.18.26</lombok.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,7 +68,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <scope>provided</scope>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
